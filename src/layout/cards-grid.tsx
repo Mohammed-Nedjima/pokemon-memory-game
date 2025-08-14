@@ -1,4 +1,4 @@
-import { use, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Card from "@/components/card";
 
 type Pokemon = {
@@ -54,7 +54,7 @@ const CardsGrid = () => {
         setClickingTrack((prev) => ({ ...prev, [name]: true }));
         setCurrentScore((prev) => prev + 1);
       }
-      const newPokemonList = pokemonList.sort((a, b) => 0.5 - Math.random());
+      const newPokemonList = pokemonList.sort(() => 0.5 - Math.random());
       setPokemonList(newPokemonList);
     },
     [clickingTrack, currentScore, highScore, pokemonList]
