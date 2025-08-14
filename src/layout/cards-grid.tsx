@@ -66,7 +66,7 @@ const CardsGrid = () => {
         <h2 className="text-2xl font-bold">Current Score: {currentScore}</h2>
         <h2 className="text-2xl font-bold">High Score: {highScore}</h2>
       </div>
-      <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {pokemonList.map((pokemon) => (
           <Card
             key={pokemon.name}
